@@ -1,6 +1,13 @@
 # Spring-boot-E-wallet-App
 This application is about an E-wallet whose backend has been built using spring boot.The app is used to send registratering and logging users. Authentication and Authorization has been implemented also using #JWT.
 
+#Features
+1.Otp generation and verification using caffeine library for user verification
+2. user validation
+3. Send money fucntions
+4. balance enquiries
+5. JWT user Authorization
+
 #Requirements
 1. Mysql db
 2. java
