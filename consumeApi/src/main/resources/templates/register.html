@@ -1,0 +1,122 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>>
+</head>
+<body>
+<div class="container-fluid register-container">
+    <div class="row row-register">
+
+        <div class="col-md-5 ms-2 register-column ">
+            <div class="text-center">
+                <h5 class="bold text-start mb-2"> Get started</h5>
+                <p class="text-start mb-2">Create Your Account</p>
+            </div>
+
+            <form th:action="@{/register}">
+                <div>
+                    <label for="firstname" class="form-label">
+                        First Name
+                    </label>
+                    <input
+                            type="text"
+                            id="firstname"
+                            name="firstname"
+                            class="form-control"
+                            aria-labelledby="firstname"
+                            required
+                    >
+
+                </div>
+                <div>
+                    <label for="lastname" class="form-label">
+                        Last Name
+                    </label>
+                    <input
+                            type="text"
+                            id="lastname"
+                            name="lastname"
+                            class="form-control"
+                            aria-labelledby="lastname"
+                            required
+                    >
+
+                </div>
+
+                <div>
+                    <label for="email" class="form-label">
+                        Email
+                    </label>
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+
+                            class="form-control"
+                            aria-labelledby="email"
+                            required
+                    >
+
+                </div>
+
+                <div>
+                    <label for="number" class="form-label">
+                        Phone
+                    </label>
+                    <input
+                            type="text"
+                            id="number"
+                            name="number"
+                            class="form-control"
+                            aria-labelledby="email"
+                            required
+                    >
+
+                </div>
+
+                <div>
+                    <label for="inputPassword5" class="form-label">
+                        Password
+                    </label>
+                    <input
+                            type="password"
+                            name="password"
+
+                            id="inputPassword5"
+                            class="form-control mb-2"
+                            aria-labelledby="passwordHelpBlock"
+                            required
+                    >
+
+                </div>
+                <div>
+                    <label for="inputPassword5" class="form-label">
+                        Confirm Password
+                    </label>
+                    <input
+                            type="password"
+                            id="confPassword"
+                            name="confirm_password"
+                            class="form-control mb-2"
+                            aria-labelledby="passwordHelpBlock"
+                            required
+                    >
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Register
+                </button>
+                <div>
+                    <p class="mt-1">
+                        Already Registered?
+                        <span>
+                    <a href to="/login">Login</a>
+                  </span>
+                    </p>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6"></div>
+    </div>
+</div>
+</body>
+</html>
