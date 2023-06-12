@@ -87,7 +87,7 @@ public class controller {
     }
 
     @GetMapping("/profile")
-    public  ResponseEntity<userModel> getEmail(){
+    public  ResponseEntity<?> getEmail(){
         String auth_header = httpServletRequest.getHeader("Authorization");
         String token;
         if (auth_header.startsWith("Bearer")){
@@ -97,10 +97,19 @@ public class controller {
         }
 
 
+
         String extracted_email = uService.ExtractUsername(token);
 
         userModel userModel = uService.getUserByEmail(extracted_email);
-        return ResponseEntity.ok(userModel);
+        boolean isTokeValid = uService.isTokenValid(token,userModel);
+        System.out.println(isTokeValid);
+        if (isTokeValid){
+            return ResponseEntity.ok(userModel);
+        }else {
+
+            return  ResponseEntity.status(HttpStatus.BAD_REQUEST).body(uService.isTokenValid(token,userModel));
+        }
+
 
 
     }
